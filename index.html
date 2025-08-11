@@ -1,1 +1,588 @@
-<h1>hello world</h1>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NXVLC5NW');</script>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마인드바디랩 최면상담센터</title>
+    <meta name="description" content="마인드바디랩 최면상담센터. 전문 최면 상담을 통해 심리 문제, 트라우마, 전생 체험 등 마음의 치유를 돕습니다. 전문 최면 상담을 통해 마음의 문제를 치유하고 본연의 나를 찾아가는 여정을 함께합니다. 지금 상담을 예약하세요.">
+    <meta name="keywords" content="최면상담, 심리상담, 최면치료, 마인드바디랩, 전생체험, 심리치유, 트라우마 상담, 무의식, 내면아이, 전생최면, 최면전생, 최면체험">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon.ico">
+    <meta property="og:title" content="마인드바디랩 최면상담센터">
+    <meta property="og:description" content="전문 최면 상담을 통해 마음의 문제를 치유하고 본연의 나를 찾아가는 여정을 함께합니다. 전문 최면 상담을 통해 마음의 문제를 치유합니다.">
+    <meta property="og:image" content="https://www.mindbodylab.kr/images/og-image.png">
+    <meta property="og:url" content="https://www.mindbodylab.kr">
+    <meta property="og:type" content="website">
+
+    <style>
+
+        /* 이 스타일 블록은 아래 버튼 위젯에만 적용됩니다. */
+        .booking-widget-container {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .booking-widget {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            box-sizing: border-box;
+        }
+
+        .booking-widget .location-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-grow: 1;
+        }
+        
+        .booking-widget .location-icon svg {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .booking-widget .location-text h4 {
+            margin: 0 0 4px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .booking-widget .location-text p {
+            margin: 0;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .booking-widget .booking-buttons {
+            flex-shrink: 0;
+        }
+
+        /* ✅ [수정됨] 새로운 '모던 스타일' 버튼 CSS */
+        .btn-modern-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: transparent;
+            color: #333;
+            padding: 12px 24px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-modern-ghost:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        /* 모바일 화면 대응 */
+        @media (max-width: 500px) {
+            .booking-widget {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .booking-buttons {
+                width: 100%; /* 모바일에서 버튼이 꽉 차도록 설정 */
+            }
+            .btn-modern-ghost {
+                width: 100%; /* 버튼 내부 컨텐츠도 꽉 차도록 */
+                justify-content: center; /* 버튼 안의 텍스트와 아이콘을 중앙 정렬 */
+                box-sizing: border-box; /* 패딩이 너비에 영향을 주지 않도록 */
+            }
+        }       
+        
+        
+/* =============================================== */
+/* ===== 플로팅 목차 (PC/모바일 반응형) ===== */
+/* =============================================== */
+
+/* --- 1. PC 화면 스타일 (화면이 1201px 이상일 때) --- */
+@media (min-width: 1201px) {
+    /* 모바일용 햄버거 버튼은 숨김 */
+    #toc-toggle-button {
+        display: none;
+    }
+
+    /* 목차 리스트를 항상 표시 */
+    #side-nav {
+        position: fixed;
+        top: 120px;
+        left: 40px;
+        padding: 15px 20px;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    #side-nav:hover {
+        opacity: 1;
+    }
+}
+
+
+/* --- 2. 모바일 화면 스타일 (화면이 1200px 이하일 때) --- */
+@media (max-width: 1200px) {
+    /* 컨테이너의 위치 지정 */
+    #floating-toc-container {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        z-index: 1001;
+    }
+
+    /* 햄버거 버튼 스타일 */
+    #toc-toggle-button {
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #333;
+    }
+    
+    /* 목차 리스트는 평소에 숨김 */
+    #side-nav {
+        display: none; /* 일단 숨겨둠 */
+        padding: 15px 20px;
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 컨테이너가 is-open 클래스를 가질 때 목차를 표시 */
+    #floating-toc-container.is-open #side-nav {
+        display: block;
+    }
+}
+
+
+/* --- 3. 공통 스타일 (PC/모바일 모두 적용) --- */
+#side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#side-nav ul li a {
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+#side-nav ul li a:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#side-nav ul li a.active {
+    color: #007bff;
+    font-weight: 700;
+    border-left: 3px solid #007bff;
+}       
+
+        
+        /* ===== 아래 코드를 복사해서 <style> 태그 맨 위에 붙여넣으세요 ===== */
+html {
+    scroll-behavior: smooth;
+    /* 스티키 헤더의 높이를 고려하여 스크롤 후 제목이 가려지지 않게 합니다. */
+    scroll-padding-top: 80px;
+}
+
+/* 스크롤 위치에 따라 활성화된 메뉴 링크에 적용될 스타일입니다. */
+.desktop-nav ul li a.active,
+.mobile-nav-overlay nav ul li a.active {
+    color: #007bff;
+    font-weight: 700;
+}
+        
+        /* 기본 스타일 */
+        body {
+            margin: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            
+            /* --- 수정된 부분 --- */
+            position: sticky; /* 스크롤을 내려도 고정되도록 변경 */
+            top: 0;           /* 화면 맨 위에 붙도록 설정 */
+            width: 100%;      /* 고정되었을 때 너비를 꽉 채움 */
+            box-sizing: border-box; /* 패딩이 너비에 영향을 주지 않도록 설정 */
+            /* --- 수정 끝 --- */
+
+            z-index: 1000;
+        }
+
+        .header-left .logo {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-left .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        /* 데스크톱 내비게이션 */
+        .desktop-nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .desktop-nav ul li {
+            margin-right: 25px;
+        }
+
+        .desktop-nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        .desktop-nav ul li a {
+            font-size: 15px;
+            font-weight: 500;
+            color: #555;
+            padding: 5px 0;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .desktop-nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* 햄버거 메뉴 아이콘 (모바일에서만 표시) */
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 24px;
+            color: #555;
+            z-index: 1100;
+        }
+
+        /* 모바일 내비게이션 오버레이 */
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+            transition: right 0.3s ease-in-out;
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+        }
+
+        .mobile-nav-overlay.active {
+            right: 0;
+        }
+
+        .mobile-nav-overlay .close-menu {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #555;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-nav-overlay nav ul {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .mobile-nav-overlay nav ul li {
+            margin-bottom: 15px;
+        }
+
+        .mobile-nav-overlay nav ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .mobile-nav-overlay nav ul li a {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+            padding: 10px 0;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-overlay nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* 메인 히어로 섹션 */
+        .main-hero {
+            background-color: #e0e0e0;
+            padding: 40px 20px;
+            text-align: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+        }
+
+        .main-hero .hero-content {
+            max-width: 600px;
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .main-hero .logo-img-placeholder {
+            width: 140px;
+            height: 90px;
+            background-color: #e0e0e0;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .main-hero .logo-img-placeholder img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-hero h1 {
+            font-size: 40px;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 8px;
+            letter-spacing: -1.5px;
+        }
+
+        .main-hero .keywords {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* 소개 섹션 */
+        .section-intro {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .section-intro h2 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .section-intro p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 채팅 버블 */
+        .chat-bubble {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffeb3b;
+            color: #333;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .chat-bubble:hover {
+            transform: scale(1.1);
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            .main-hero {
+                padding: 30px 20px;
+                min-height: 200px;
+            }
+            .main-hero h1 {
+                font-size: 28px;
+            }
+            .main-hero .keywords {
+                font-size: 14px;
+            }
+            .main-hero .logo-img-placeholder {
+                width: 100px;
+                height: 70px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVLC5NW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="floating-toc-container">
+    <button id="toc-toggle-button">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="side-nav">
+        <ul>
+            <li><a href="#journey"><span>고민 이야기</span></a></li>
+            <li><a href="#principle"><span>치유 원리</span></a></li>
+            <li><a href="#guide"><span>상담 안내</span></a></li>
+            <li><a href="#director"><span>센터장 소개</span></a></li>
+            <li><a href="#contact"><span>오시는 길</span></a></li>
+        </ul>
+    </nav>
+</div>
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo">
+                <img src="images/mindbodylab_icon.png" alt="MindbodyLab Icon" onerror="this.onerror=null; this.src='https://placehold.co/100x100?text=Logo';">
+                <span><font color="red">마인드</font><font color="blue">바디</font><font color="orange">랩</font></span>
+            </a>
+        </div>
+        <div class="header-right">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="https://m.site.naver.com/1NVuG">소개</a></li>
+                    <li><a href="https://m.site.naver.com/1NVtM">블로그</a></li>
+                    <li><a href="https://m.site.naver.com/1NVuo">유튜브</a></li>
+                    <li><a href="https://m.site.naver.com/1NVu7">상담 예약</a></li>
+                    <li><a href="https://m.site.naver.com/1NVtx">클래스/컨텐츠</a></li>
+                    <li><a href="https://m.site.naver.com/1NVtW">게시판</a></li>
+                    <li><a href="https://m.site.naver.com/1NVux">공지사항</a></li>
+                
+                </ul>
+            </nav>
+
+            
+            <button class="hamburger-menu" id="hamburgerMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <button class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="https://m.site.naver.com/1NVuG">소개</a></li>
+                <li><a href="https://m.site.naver.com/1NVtM">블로그</a></li>
+                <li><a href="https://m.site.naver.com/1NVuo">유튜브</a></li>
+                <li><a href="https://m.site.naver.com/1NVu7">상담 예약</a></li>
+                <li><a href="https://m.site.naver.com/1NVtx">클래스/컨텐츠</a></li>
+                <li><a href="https://m.site.naver.com/1NVtW">게시판</a></li>
+                <li><a href="https://m.site.naver.com/1NVux">공지사항</a></li>
+            
+            </ul>
+        </nav>
+    </div>
